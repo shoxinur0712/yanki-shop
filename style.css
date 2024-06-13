@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 500px;
+
+    margin: 100px auto 0;
+    position: relative;
+}
+
+.box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.wheel-1 {
+    width: 90px;
+    height: 90px;
+    background-image: url("./wheel.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+
+
+    position: absolute;
+    left: 9.5%;
+    top: 43%;
+
+    animation-name: spine;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.wheel-2 {
+    width: 90px;
+    height: 90px;
+    background-image: url("./wheel.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 100%;
+    position: absolute;
+    right: 10.5%;
+    top: 48%;
+
+    animation-name: spine;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes spine {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
